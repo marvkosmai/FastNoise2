@@ -1,5 +1,7 @@
 #include "FastSIMD/FastSIMD.h"
 
+#define SIMDPP_ARCH_X86_AVX2 1
+
 #if FASTSIMD_COMPILE_AVX2
 
 // To compile AVX2 support enable AVX(2) code generation compiler flags for this file

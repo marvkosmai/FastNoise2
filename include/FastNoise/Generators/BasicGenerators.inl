@@ -41,11 +41,11 @@ class FS_T<FastNoise::Checkerboard, FS> : public virtual FastNoise::Checkerboard
     template<typename... P>
     FS_INLINE float32v GenT( int32v seed, P... pos ) const
     {
-        float32v multiplier = FS_Reciprocal_f32( float32v( mSize ) );
+        simdpp::float32v multiplier = simdpp::rcp_e( simdpp::splat<simdpp::float32v>( mSize ) );
 
-        int32v value = (FS_Convertf32_i32( pos * multiplier ) ^ ...);
+        simdpp::int32v value = (simdpp::to_int32( simdpp::trunc( simdpp::float32v( pos.vector ) * multiplier ) ) ^ ...);
 
-        return float32v( 1.0f ) ^ FS_Casti32_f32( value << 31 );
+        return simdpp::float32v( simdpp::make_float<simdpp::float32v>( 1.0f ) ^ simdpp::bit_cast<simdpp::float32v>( value << 31 )).native();
     }
 };
 
