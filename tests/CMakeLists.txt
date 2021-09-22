@@ -30,6 +30,11 @@ target_link_libraries(FastNoiseBenchmark
     benchmark::benchmark
 )
 
+if(MSVC)
+target_compile_options(FastNoiseBenchmark PRIVATE /GL- /GS- /fp:fast /arch:AVX2 /Ob3)
+else()
+target_compile_options(FastNoiseBenchmark PRIVATE -ffast-math -mavx2 -mfma)
+endif()
 
 add_executable(FastNoiseCpp11Test
     "FastNoiseCpp11Include.cpp"
