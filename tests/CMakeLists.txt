@@ -30,6 +30,9 @@ target_link_libraries(FastNoiseBenchmark
     benchmark::benchmark
 )
 
+if(MSVC)
+    target_link_options(FastNoiseBenchmark PRIVATE /DYNAMICBASE:NO $<$<CONFIG:Release>: /GUARD:NO>)
+endif()
 
 add_executable(FastNoiseCpp11Test
     "FastNoiseCpp11Include.cpp"
