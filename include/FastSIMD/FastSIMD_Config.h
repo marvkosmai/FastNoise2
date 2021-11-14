@@ -29,5 +29,5 @@
 #define FASTSIMD_COMPILE_NEON   (FASTSIMD_ARM & true )
 
 #define FASTSIMD_USE_FMA                   true
-#define FASTSIMD_CONFIG_GENERATE_CONSTANTS false
+#define FASTSIMD_CONFIG_GENERATE_CONSTANTS true
 
