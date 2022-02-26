@@ -22,6 +22,7 @@ project "FastNoise2"
 
     defines
     {
+        "FASTNOISE_STATIC_LIB",
         "FASTNOISE_EXPORT"
     }
 
@@ -34,7 +35,9 @@ project "FastNoise2"
     filter "system:windows"
         systemversion "latest"
         cppdialect "C++17"
-        staticruntime "On"
+        staticruntime "Off"
+        runtime "Debug"
     
     filter { "system:windows", "configurations:Release" }
-        buildoptions "/MT"
+        staticruntime "Off"
+        runtime "Release"
