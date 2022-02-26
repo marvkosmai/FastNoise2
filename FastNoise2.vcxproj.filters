@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\FastNoise">
+      <UniqueIdentifier>{447AE5DD-B090-E373-F907-6F95655DB4FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\FastNoise\Generators">
+      <UniqueIdentifier>{ED7802C4-D933-F26F-82EB-6ABA6E853C00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\FastSIMD">
+      <UniqueIdentifier>{7352209A-5F4B-3FEC-887D-247174D51EF8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\FastNoise">
+      <UniqueIdentifier>{E8529139-5413-0D70-1D4E-56ED89CD514C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\FastSIMD">
+      <UniqueIdentifier>{97A6A185-8309-312A-2C8F-69E018D1FCAC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\FastNoise\FastNoise.h">
+      <Filter>include\FastNoise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\FastNoise_C.h">
+      <Filter>include\FastNoise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\FastNoise_Config.h">
+      <Filter>include\FastNoise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\FastNoise_Export.h">
+      <Filter>include\FastNoise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\BasicGenerators.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\Blends.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\Cellular.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\DomainWarp.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\DomainWarpFractal.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\Fractal.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\Generator.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\Modifiers.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\Perlin.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\Simplex.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Generators\Value.h">
+      <Filter>include\FastNoise\Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\Metadata.h">
+      <Filter>include\FastNoise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastNoise\SmartNode.h">
+      <Filter>include\FastNoise</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastSIMD\FastSIMD.h">
+      <Filter>include\FastSIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastSIMD\FastSIMD_Config.h">
+      <Filter>include\FastSIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastSIMD\FastSIMD_Export.h">
+      <Filter>include\FastSIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastSIMD\FunctionList.h">
+      <Filter>include\FastSIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastSIMD\InlInclude.h">
+      <Filter>include\FastSIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FastSIMD\SIMDTypeList.h">
+      <Filter>include\FastSIMD</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\FastNoise\FastNoise_C.cpp">
+      <Filter>src\FastNoise</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastNoise\Metadata.cpp">
+      <Filter>src\FastNoise</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastNoise\SmartNode.cpp">
+      <Filter>src\FastNoise</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_AVX2.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_AVX512.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_NEON.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSE2.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSE3.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSE41.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSE42.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSSE3.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_Scalar.cpp">
+      <Filter>src\FastSIMD</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

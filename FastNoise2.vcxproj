@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Dist|x64">
+      <Configuration>Dist</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6313B534-4FCB-F681-B8D2-CFDDA4A99172}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FastNoise2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>bin\Debug-windows-x86_64\FastNoise2\</OutDir>
+    <IntDir>bin-int\Debug-windows-x86_64\FastNoise2\</IntDir>
+    <TargetName>FastNoise2</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>bin\Release-windows-x86_64\FastNoise2\</OutDir>
+    <IntDir>bin-int\Release-windows-x86_64\FastNoise2\</IntDir>
+    <TargetName>FastNoise2</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <OutDir>bin\Dist-windows-x86_64\FastNoise2\</OutDir>
+    <IntDir>bin-int\Dist-windows-x86_64\FastNoise2\</IntDir>
+    <TargetName>FastNoise2</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>FASTNOISE_STATIC_LIB;FASTNOISE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/arch:AVX /arch:AVX512 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>FASTNOISE_STATIC_LIB;FASTNOISE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/arch:AVX /arch:AVX512 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>FASTNOISE_STATIC_LIB;FASTNOISE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalOptions>/arch:AVX /arch:AVX512 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\FastNoise\FastNoise.h" />
+    <ClInclude Include="include\FastNoise\FastNoise_C.h" />
+    <ClInclude Include="include\FastNoise\FastNoise_Config.h" />
+    <ClInclude Include="include\FastNoise\FastNoise_Export.h" />
+    <ClInclude Include="include\FastNoise\Generators\BasicGenerators.h" />
+    <ClInclude Include="include\FastNoise\Generators\Blends.h" />
+    <ClInclude Include="include\FastNoise\Generators\Cellular.h" />
+    <ClInclude Include="include\FastNoise\Generators\DomainWarp.h" />
+    <ClInclude Include="include\FastNoise\Generators\DomainWarpFractal.h" />
+    <ClInclude Include="include\FastNoise\Generators\Fractal.h" />
+    <ClInclude Include="include\FastNoise\Generators\Generator.h" />
+    <ClInclude Include="include\FastNoise\Generators\Modifiers.h" />
+    <ClInclude Include="include\FastNoise\Generators\Perlin.h" />
+    <ClInclude Include="include\FastNoise\Generators\Simplex.h" />
+    <ClInclude Include="include\FastNoise\Generators\Value.h" />
+    <ClInclude Include="include\FastNoise\Metadata.h" />
+    <ClInclude Include="include\FastNoise\SmartNode.h" />
+    <ClInclude Include="include\FastSIMD\FastSIMD.h" />
+    <ClInclude Include="include\FastSIMD\FastSIMD_Config.h" />
+    <ClInclude Include="include\FastSIMD\FastSIMD_Export.h" />
+    <ClInclude Include="include\FastSIMD\FunctionList.h" />
+    <ClInclude Include="include\FastSIMD\InlInclude.h" />
+    <ClInclude Include="include\FastSIMD\SIMDTypeList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\FastNoise\FastNoise_C.cpp" />
+    <ClCompile Include="src\FastNoise\Metadata.cpp" />
+    <ClCompile Include="src\FastNoise\SmartNode.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_AVX2.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_AVX512.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_NEON.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSE2.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSE3.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSE41.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSE42.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_SSSE3.cpp" />
+    <ClCompile Include="src\FastSIMD\FastSIMD_Level_Scalar.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
