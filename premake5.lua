@@ -5,6 +5,11 @@ project "FastNoise2"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    includedirs
+	{
+        "include"
+    }
+
     files
     {
         "include/FastSIMD/*.h",
@@ -13,6 +18,17 @@ project "FastNoise2"
         "include/FastNoise/*.h",
         "include/FastNoise/Generators/*.h",
         "src/FastNoise/*.cpp"
+    }
+
+    defines
+    {
+        "FASTNOISE_EXPORT"
+    }
+
+    buildoptions
+    {
+        "/arch:AVX",
+        "/arch:AVX512"
     }
 
     filter "system:windows"
