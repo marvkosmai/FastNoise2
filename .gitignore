@@ -35,3 +35,6 @@
 /build
 /enc_temp_folder
 /cpm-cache
+
+bin/
+bin-int/
